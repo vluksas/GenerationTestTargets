@@ -1,0 +1,102 @@
+
+ package org::ktu::examples
+  
+ context GeometryCalculator::areaOfCircle(radius:Real):Real
+ pre: radius > 0
+ post: result = 3.1415926*radius*radius
+ 
+ context GeometryCalculator::circumferenceOfCircle(radius:Real):Real
+ pre: radius > 0
+ post: result = 3.1415926*radius*radius
+
+ context GeometryCalculator::perimeterOfRectangle(length:Real, width:Real):Real
+ pre: length > 0
+ pre: width > 0
+ post: result = 2*length+2*width
+ 
+ context GeometryCalculator::areaOfRectangle(length:Real, width:Real):Real
+ pre: length > 0
+ pre: width > 0
+ post: result = length*width
+ 
+ context GeometryCalculator::perimeterOfSquare(a:Real):Real
+ pre: a > 0
+ post: result = 4*a
+ 
+ context GeometryCalculator::areaOfSquare(a:Real):Real
+ pre: a > 0
+ post: result = a*a
+ 
+ context GeometryCalculator::areaOfTriangle(base:Real, height:Real):Real
+ pre: base > 0
+ pre: height > 0
+ post: result = base*height*0.5
+ 
+ context GeometryCalculator::areaOfTrapezoid(base1:Real, base2:Real, height:Real):Real
+ pre: base1 > 0
+ pre: base2 > 0
+ pre: height > 0
+ post: result = 0.5*(base1+base2)*height
+ 
+ context GeometryCalculator::areaOfParallelogram(base:Real, height:Real):Real
+ pre: base > 0
+ pre: height > 0
+ post: result = base*height
+ 
+ context GeometryCalculator::volumeOfRectangularPrism(length:Real, height:Real, width:Real):Real
+ pre: length > 0
+ pre: height > 0
+ pre: width > 0
+ post: result = length*height*width
+ 
+ context GeometryCalculator::surfaceAreaOfRectangularPrism(length:Real, height:Real, width:Real):Real
+ pre: length > 0
+ pre: height > 0
+ pre: width > 0
+ post: result = 2*length*height+2*length*width+2*height*width
+ 
+ context GeometryCalculator::volumeOfGeneralPrism(areaOfBase:Real, height:Real):Real
+ pre: height > 0
+ pre: areaOfBase > 0
+ post: result = areaOfBase*height
+ 
+ context GeometryCalculator::volumeOfCylinder(areaOfBase:Real, height:Real):Real
+ pre: height > 0
+ pre: areaOfBase > 0
+ post: result = areaOfBase*height
+ 
+ context GeometryCalculator::surfaceAreaOfGeneralPrism(areaOfBase:Real, height:Real, circumference:Real):Real
+ pre: height > 0
+ pre: areaOfBase > 0
+ pre: circumference > 0
+ post: result = 2*areaOfBase+circumference*height
+ 
+ context GeometryCalculator::volumeOfSquarePyramid(areaOfBase:Real, height:Real):Real
+ pre: height > 0
+ pre: areaOfBase > 0
+ post: result = 0.333333*areaOfBase*height
+ 
+ context GeometryCalculator::surfaceAreaOfSquarePyramid(perimeterOfBase:Real, slantHeight:Real):Real
+ pre: perimeterOfBase > 0
+ pre: slantHeight > 0
+ post: result = 0.5*perimeterOfBase*slantHeight
+ 
+ context GeometryCalculator::volumeOfRightCircularCone(areaOfBase:Real, height:Real):Real
+ pre: height > 0
+ pre: areaOfBase > 0
+ post: result = 0.333333*areaOfBase*height
+ 
+ context GeometryCalculator::surfaceAreaOfRightCircularCone(circumference:Real, slantHeight:Real):Real
+ pre: circumference > 0
+ pre: slantHeight > 0
+ post: result = 0.5*circumference*slantHeight
+ 
+ context GeometryCalculator::volumeOfSphere(radius:Real):Real
+ pre: radius > 0
+ post: result = 4.188790204*radius*radius*radius
+ 
+ context GeometryCalculator::surfaceAreaOfSphere(radius:Real):Real
+ pre: radius > 0
+ post: result = 12.56637061*radius*radius
+ 
+ endpackage

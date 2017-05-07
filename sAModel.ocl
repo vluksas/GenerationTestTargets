@@ -1,0 +1,12 @@
+
+ package org::ktu::examples
+ 
+ 
+ context SimulatedAnnealing::apply(targetValue: Real)
+ pre: targetValue >= 0
+ pre: targetValue <= 50
+ 
+ context SimulatedAnnealing::fitnessFunction(valueToCheck: Real):Real
+ post: result = 50-self.bestValue+valueToCheck
+
+ endpackage

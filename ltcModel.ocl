@@ -1,0 +1,6 @@
+ package org::ktu::examples
+ 
+ context ConstructLTConverter::getBoolName(x:Boolean):String
+ post: result = 'tiesa' or result = 'melas'
+ 
+ endpackage

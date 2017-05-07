@@ -1,0 +1,30 @@
+
+ package org::ktu::examples
+ 
+ context BasicCalculator
+ inv: self.magicNumber = 42
+ 
+ context BasicCalculator::add(a:Integer, b:Integer):Integer
+ post: result = a+b
+ 
+ context BasicCalculator::addOne(a:Integer):Integer
+ post: result = a+1
+ 
+ context BasicCalculator::subtract(a:Integer, b:Integer):Integer
+ post: result = a-b
+ 
+ context BasicCalculator::subtractOne(a:Integer):Integer
+ post: result = a-1
+-- 
+ context BasicCalculator::divide(a:Integer, b:Integer):Real
+ post: result = a/b
+ pre: b <> 0
+ 
+ context BasicCalculator::multiply(a:Integer, b:Integer):Integer
+ post: result = a*b
+ 
+context BasicCalculator::setMagicNumber(a:Integer)
+pre: self.magicNumber = 42
+
+ 
+ endpackage

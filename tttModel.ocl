@@ -1,0 +1,22 @@
+
+ package org::ktu::examples
+ 
+ context BadTicTacToe
+ inv: self.currentPlayer > 0 and self.currentPlayer < 3
+ inv: self.winner > 0 and self.winner < 3
+ 
+ context BadTicTacToe::reset()
+ post: self.over = false
+ post: self.currentPlayer = 1
+ post: self.winner = 0
+ 
+ context BadTicTacToe::mark(i:Integer, j:Integer, mark:Integer):Boolean
+ pre: mark <> 0
+ pre: i < 3 and i >= 0
+ pre: j < 3 and j >= 0
+ 
+ context BadTicTacToe::makeTurn(i:Integer, j:Integer):Boolean
+ pre: self.winner = 0
+ pre: self.over = false
+
+ endpackage
